@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #faf8f5;
+    color: #1c1917;
+  }
+  
+  h1, h2, h3, .font-serif-luxury {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-cormorant {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-sans-clean {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  code, pre, .font-mono-tech {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom subtle luxury scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f0ea;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4c5b9;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8a293;
+}
+
+/* Luxury Editorial Glass & Shadows */
+.editorial-card {
+  background: #ffffff;
+  border: 1px solid #ede4db;
+  box-shadow: 0 4px 20px -2px rgba(74, 21, 33, 0.04), 0 2px 6px -1px rgba(28, 25, 23, 0.02);
+}
+
+.editorial-card:hover {
+  border-color: #d9c2b0;
+  box-shadow: 0 12px 32px -4px rgba(74, 21, 33, 0.08), 0 4px 12px -2px rgba(28, 25, 23, 0.04);
+}
+
+.editorial-card-rose {
+  background: linear-gradient(135deg, #ffffff 0%, #fdf6f4 100%);
+  border: 1px solid #f2dfdc;
+}
+
+.editorial-card-dark {
+  background: #1c1917;
+  border: 1px solid #2e2a27;
+  color: #faf8f5;
+}
+
+.text-gradient-burgundy {
+  background: linear-gradient(135deg, #4a1521 0%, #7c2d3d 50%, #b8686c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-rose-gold {
+  background: linear-gradient(135deg, #4a1521 0%, #b8686c 50%, #c59b27 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-burgundy-primary {
+  background-color: #4a1521;
+}
+
+.bg-blush-soft {
+  background-color: #fbf0ec;
+}
+
+.border-dusty-rose {
+  border-color: #e5c9c5;
+}
+
+/* Grain texture overlay */
+.subtle-grain {
+  background-image: radial-gradient(rgba(74, 21, 33, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+@keyframes subtleFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-subtle-float {
+  animation: subtleFloat 5s ease-in-out infinite;
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  nav, footer, #recruiter-drawer, .no-print {
+    display: none !important;
+  }
+}
